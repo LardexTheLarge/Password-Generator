@@ -40,16 +40,25 @@ function generatePassword() {
   //prompt user for length
   var Length = prompt("PassWord needs to be more than 8 and less than 128:");
 
-  //prompt user to confirm
-  var promptArray = [
-    (lowCase = confirm("do you want Lower case letters")),
-    (upperCase = confirm("do you want capital Letters")),
-    (specialChar = confirm("do you want special characters")),
-    (numbers = confirm("do you want numbers")),
-  ];
-  // iterate through each prompt
-  for (var i = 0; i < promptArray; i++) {
-    if (promptArray === true) {
+  if (Length < 8) {
+    alert("Restart Webpage Password is too short");
+    window.location.reload();
+  } else if (Length > 128) {
+    alert("Restarting Webpage Password is too long");
+    window.location.reload();
+  } else {
+    //prompt user to confirm
+    var promptArray = [
+      (lowCase = confirm("do you want Lower case letters")),
+      (upperCase = confirm("do you want capital Letters")),
+      (specialChar = confirm("do you want special characters")),
+      (numbers = confirm("do you want numbers")),
+    ];
+
+    // iterate through each prompt
+    for (var i = 0; i < promptArray.length; i++) {
+      if (promptArray[i] === true) {
+      }
     }
   }
 
