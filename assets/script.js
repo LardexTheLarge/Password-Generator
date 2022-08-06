@@ -26,35 +26,41 @@ function generatePassword() {
   var uSplit = upLetters.split("");
   var nSplit = num.split("");
   var speSplit = special.split("");
+  var allSplit1 = lowLetters.concat(upLetters, num, special).split("");
 
-  console.log(lSplit);
+  var allSplit2 = {
+    low: lSplit,
+    up: uSplit,
+    number: nSplit,
+    spec: speSplit,
+  };
+
+  var allSplit3 = [lSplit, uSplit, nSplit, speSplit];
 
   //prompt user for length
   var Length = prompt("PassWord needs to be more than 8 and less than 128:");
-  console.log(Length);
 
   //prompt user to confirm
-  // var lowCase = confirm("do you want Lower case letters");
-  // var upperCase = confirm("do you want capital Letters");
-  // var specialChar = confirm("do you want special characters");
-  // var numbers = confirm("do you want numbers");
+  var promptArray = [
+    (lowCase = confirm("do you want Lower case letters")),
+    (upperCase = confirm("do you want capital Letters")),
+    (specialChar = confirm("do you want special characters")),
+    (numbers = confirm("do you want numbers")),
+  ];
+  // iterate through each prompt
+  for (var i = 0; i < promptArray; i++) {
+    if (promptArray === true) {
+    }
+  }
 
-  // if (
-  //   tagName !== "h1" &&
-  //   tagName !== "h2" &&
-  //   tagName !== "p" &&
-  //   tagName !== "div"
-  // ) {
-  //   alert("please enter a valid tag");
-  // } else {
-  // }
-
-  //gen the pasword using user input
+  //generate the password using user input
   var randomPassword = "";
   for (var i = 0, p = lSplit.length; i < Length; i++) {
     randomPassword += lSplit[Math.floor(Math.random() * p)];
   }
+
   console.log(randomPassword);
+  console.log(randomPassword.length);
 
   //return the generated password
   return randomPassword;
