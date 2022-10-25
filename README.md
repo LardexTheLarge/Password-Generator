@@ -9,7 +9,6 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
-  - [License](#license)
   - [Tests](#test)
   - [Questions](#questions)
 
