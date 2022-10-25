@@ -2,7 +2,7 @@
 
   ## Description
 
-  Generates a random password by asking you what kind of characters you want by going through four ?: statements that link the confirm pop up and variables which then splits them apart and turns them into arrays. Finally, after the user is happy with all their options selected it takes the new array and makes a random password. All of this was made using javaScript.
+  Generates a random password by asking you what kind of characters you want by going through four conditinal operators (?:) statements that link the confirm popups and variables which then splits them apart and turns them into arrays. Finally, after the user is happy with all their options selected it takes the new array and makes a random password. All of this was made using javaScript, HTML, and CSS.
 
   ## Table of Contents
 
